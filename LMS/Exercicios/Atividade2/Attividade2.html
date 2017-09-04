@@ -9,17 +9,24 @@
 <body style="background-color:	#d4c4c4">
     
     <img src="1.jpg" style = "padding-left: 45%; height:180px; width:130px;" >
+    <header> 
     <h1 style = "text-align:center; color: #bf4040;">Grão de Açucar</h1>
-    <h3 style = "text-align:center; color: #3396FF"> Você que é amante de doces veio ao lugar certo, aqui você irá encontar receitas deliciosas e fáceis de preparar.</h3>
-    <svg height="50" width="1220">
+    </header>
+    
+    <svg height="20" width="1220">
     <line x1="100" y1="0" x2="1220" y2="0" style="stroke:#bf4040;stroke-width:4" />
     </svg>
     
-    <article style=" padding-left: 10%">
-       <header>  
+    <nav style=" padding-left: 38%">
+        <a href="http://confeitando.com.br/">Confeitando</a>
+        <a href="http://www.mariachocolate.com.br/blog/">Maria Chocolate</a>
+        <a href="http://blogdaconfeiteira.com.br/">Blog da Confeitaria</a>
+    </nav>
+
+    <br><br>
+    <article style=" padding-left: 10%"> 
            <h1 style=" color: #3399FF">Pudim de Leite em Pó</h1>
            <img src ="pudim-de-leite-em-po_1.jpg" style = "height:400px; width:480px;" >
-           </header>
            <section> 
            <h3 style=" color: #C4080D">Ingredientes:</h3>
            <ul>
@@ -43,11 +50,9 @@
            </section>
     </article>
     
-    <article style=" padding-left: 10%">
-       <header>  
+    <article style=" padding-left: 10%">  
            <h1 style=" color: #3399FF">Petit Gateau</h1>
            <img src ="petit-gateau.jpg" style = "height:400px; width:480px;" >
-           </header>
            <section> 
            <h3 style=" color: #C4080D">Ingredientes:</h3>
            <ul>
@@ -75,7 +80,33 @@
     <svg height="50" width="1220">
     <line x1="100" y1="0" x2="1220" y2="0" style="stroke:#bf4040;;stroke-width:4" />
     </svg>
-          
+    
+    <article style=" padding-left: 47%">
+    <svg width="100" height="88">
+ 	<circle cx="50" cy="50" r="30" stroke="#3399FF" stroke-width="4" fill="#d4c4c4" />
+    </svg>
+    
+    <svg height="100" width="1220">
+    <line x1="50" y1="1220" x2="50" y2="0" style="stroke:#3399FF;;stroke-width:4" />
+    </svg>
+    
+    <svg height="50" width="1220">
+    <line x1="120" y1="100" x2="50" y2="0" style="stroke:#3399FF;;stroke-width:4" />
+    </svg>
+    
+    <svg height="50" width="1220">
+    <line x1="40" y1="120" x2="0" y2="0" style="stroke:#3399FF;;stroke-width:4" />
+    </svg>
+    </article>
+    
+    <article style=" padding-left: 33%">
+        <p style="color: #bf4040"><strong>Escute o Podcast a seguir e aprenda a fazer um delicioso bolo de macaxeira</strong></p>
+        <audio controls style=" padding-left: 10%">
+        <source src="Bolo.mp3" type="audio/mpeg">
+        </audio>
+    </article>
+    
+    <br><br>       
     <article style=" padding-left: 13%">
        <video width="320" height="240" controls>
        <source src="Torta_Chocolate.mp4" type="video/mp4">
@@ -98,13 +129,14 @@
        <input type="text" name="nome" maxlength = 15>
        <br>
        Email:<br>
-       <input type="email" name="email">
+       <input type="text" name="email" value="exemplo@gmail.com" readonly>
        <br>
        Sexo: <br>
        <input type="radio" name="sexo" value="masculino" checked>Masculino<br>
        <input type="radio" name="sexo" value="feminino" checked>Feminino<br>
        <input type="radio" name="sexo" value="outro">Outro<br>
-       <input type="number" name="quantidade"  min="25000" max="30000"/> <br><br>
+       Idade: <br>
+       <input type="number" name="quantidade"  min="16" max="30"/><br>
        
        <input type="checkbox" name="novidades" value="receber">Receber novidades por e-mail<br><br>
        <input type="submit" value= "Cadastrar">
@@ -112,13 +144,7 @@
   
     </article>
                
-    
-    <nav style=" padding-left: 45%">
-        <a href="http://confeitando.com.br/">Confeitando</a>
-        <a href="http://www.mariachocolate.com.br/blog/">Maria Chocolate</a>
-        <a href="http://blogdaconfeiteira.com.br/">Blog da Confeitaria</a>
-    </nav>
-       
+           
     
 </body>
 </html>
