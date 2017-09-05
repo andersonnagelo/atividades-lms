@@ -1,0 +1,31 @@
+.links {
+    text-decoration: none;
+}
+
+header {
+    color: #C4080D;
+    text-align: center
+}
+
+body {
+    background-color: #66CDAA;
+}
+
+.article1 {
+    border: 3px solid white;
+    margin: 30px;
+}
+
+article1 h1 {
+    text-align: center;
+}
+
+.article2 {
+    border: 3px solid white;
+    margin: 30px;
+}
+
+.article3 {
+    border: 3px solid white;
+    margin: 30px;
+}
