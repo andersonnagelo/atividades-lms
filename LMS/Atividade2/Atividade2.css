@@ -25,6 +25,7 @@ nav a:hover {
     text-align: center;
     border: 3px solid white;
     margin: 30px;
+    padding: 30px;
 }
 
 .article1 h1 {
@@ -35,6 +36,7 @@ nav a:hover {
     text-align: center;
     border: 3px solid white;
     margin: 30px;
+    padding: 30px;
 }
 
 .article2 h1 {
@@ -43,10 +45,22 @@ nav a:hover {
 
 .article3 {
     text-align: center;
+    border: 3px solid white;
+    margin: 30px;
+    padding: 30px;
 }
 
 .article4 {
     text-align: center;
+}
+
+.article5 {
+    text-align: center;
+    color: #FFFF7A;
+}
+
+.article5 h2 {
+    color: #bf4040;
 }
 
 ul li {
