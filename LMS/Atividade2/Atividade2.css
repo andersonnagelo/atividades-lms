@@ -1,31 +1,65 @@
-.links {
-    text-decoration: none;
-}
-
-header {
-    color: #C4080D;
-    text-align: center
-}
-
 body {
-    background-color: #66CDAA;
+    background-color: #5CAD7A;
 }
 
-.article1 {
-    border: 3px solid white;
-    margin: 30px;
+header h1 {
+    text-align: center;
+    color: #bf4040;
 }
 
-article1 h1 {
+nav {
     text-align: center;
 }
 
-.article2 {
+nav a {
+    color: #FFFF7A;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #bf4040;
+    transition: 0.5;
+}
+
+.article1 {
+    text-align: center;
     border: 3px solid white;
     margin: 30px;
 }
 
-.article3 {
+.article1 h1 {
+    color: #bf4040;
+}
+
+.article2 {
+    text-align: center;
     border: 3px solid white;
     margin: 30px;
+}
+
+.article2 h1 {
+    color: #bf4040;
+}
+
+.article3 {
+    text-align: center;
+}
+
+.article4 {
+    text-align: center;
+}
+
+ul li {
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    color: #FFFF7A;
+    text-align: center;
+}
+
+p {
+    color: white;
+    text-align: center;
 }
