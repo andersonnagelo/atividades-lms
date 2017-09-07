@@ -5,10 +5,17 @@ body {
 header h1 {
     text-align: center;
     color: #bf4040;
+    font-family: "Verdana";
+}
+
+div {
+    text-align: justify;
+    margin: 0 auto;
 }
 
 nav {
     text-align: center;
+    font-size: 20px;
 }
 
 nav a {
@@ -30,6 +37,7 @@ nav a:hover {
 
 .article1 h1 {
     color: #bf4040;
+    font-size: 24px;
 }
 
 .article2 {
@@ -41,6 +49,7 @@ nav a:hover {
 
 .article2 h1 {
     color: #bf4040;
+    font-size: 24px;
 }
 
 .article3 {
@@ -57,23 +66,28 @@ nav a:hover {
 .article5 {
     text-align: center;
     color: #FFFF7A;
+    font-size: 18px;
 }
 
 .article5 h2 {
     color: #bf4040;
 }
 
-ul li {
-    text-align: center;
-    color: white;
+.degrade {
+    width: 1300x;
+    height: 400px;
+    background-image: url(degrade2.png);
 }
 
 h3 {
     color: #FFFF7A;
     text-align: center;
+    font-size: 20px;
 }
 
 p {
     color: white;
     text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
 }
