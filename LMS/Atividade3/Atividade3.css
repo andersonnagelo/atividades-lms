@@ -10,7 +10,8 @@ body {
 header h1 {
     text-align: center;
     color: #bf4040;
-    font-family: "Verdana";
+    font-family: 'Dosis', sans-serif;
+    font-size: 36px;
 }
 
 #center {
@@ -22,6 +23,7 @@ header h1 {
 nav {
     text-align: center;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav a {
@@ -40,32 +42,34 @@ section {
 }
 
 .article1 {
-    border: 3px solid white;
-    margin: 30px;
+    border: 0.09cm double white;
+    margin: 10vw;
     padding: 30px;
 }
 
 .article1 h1 {
     color: #bf4040;
     font-size: 24px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .article2 {
     text-align: center;
-    border: 3px solid white;
-    margin: 30px;
+    border: 0.09cm solid #FFFF7A;
+    margin: 10vw;
     padding: 30px;
 }
 
 .article2 h1 {
     color: #bf4040;
     font-size: 24px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .article3 {
     text-align: center;
-    border: 3px solid white;
-    margin: 30px;
+    border: 0.09cm dashed #bf4040;
+    margin: 10vw;
     padding: 30px;
 }
 
@@ -81,6 +85,7 @@ section {
 
 .article5 h2 {
     color: #bf4040;
+    font-family: 'Roboto', sans-serif;
 }
 
 .degrade {
@@ -93,12 +98,17 @@ h3 {
     color: #FFFF7A;
     text-align: center;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
     color: white;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+#podcast {
+    color: #FFFF7A;
 }
 
 .ingredientes {
