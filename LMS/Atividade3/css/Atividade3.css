@@ -45,6 +45,7 @@ section {
 .article1 {
     border: 0.09cm double white;
     margin: 10vw;
+    margin: 10vh;
     padding: 30px;
 }
 
@@ -58,6 +59,7 @@ section {
     text-align: center;
     border: 0.09cm solid #FFFF7A;
     margin: 10vw;
+    margin: 10vh;
     padding: 30px;
 }
 
@@ -71,6 +73,7 @@ section {
     text-align: center;
     border: 0.09cm dashed #bf4040;
     margin: 10vw;
+    margin: 10vh;
     padding: 30px;
 }
 
