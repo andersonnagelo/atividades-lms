@@ -9,10 +9,10 @@ header {
     padding: 8px 15px;
 }
 
-header div p {
+.texto {
     position: relative;
-    right: -840px;
-    bottom: 28px;
+    bottom: 30px;
+    text-align: right;
     font-family: sans-serif;
     letter-spacing: 4px;
     font-size: 14px;
@@ -123,4 +123,5 @@ img {
     width: 260px;
     height: 40px;
     margin-top: 10px;
+    clear: right;
 }
