@@ -1,0 +1,151 @@
+* {
+margin: 0;
+padding: 0;
+}
+                                                                              
+body {
+background-color: white;
+}
+                                                                              
+.navegador-superior {
+background-color: #1ba08c;
+overflow: auto;
+box-shadow: 0 2px 3px #909090;
+}
+                                                                              
+.navegador-superior ul {
+list-style: none;
+}
+                                                                              
+.navegador-superior>ul>li>a,
+.dropdown .dropdown-button {
+display: block;
+text-decoration: none;
+color: white;
+float: left;
+padding: 17px;
+cursor: pointer;
+font-size: 17px;
+font-family: sans-serif;
+letter-spacing: 4px;
+}
+                                                                              
+.navegador-superior>ul>li>a:hover,
+.dropdown .dropdown-button:hover {
+background-color: white;
+color: black;
+}
+                                                                              
+.dropdown {
+float: left;
+}
+                                                                              
+.dropdown-content {
+position: absolute;
+background-color: #ddd;
+width: 400px;
+max-height: 0px;
+overflow: hidden;
+font-family: sans-serif;
+font-size: 17px;
+line-height: 1.5;
+}
+                                                                              
+.dropdown:hover .dropdown-content {
+max-height: 1000px;
+transition: max-height 1s;
+}
+                                                                              
+.dropdown .dropdown-button {
+float: none;
+}
+                                                                              
+.dropdown-content>ul {
+list-style: none;
+}
+                                                                              
+.dropdown-content>ul>li>a {
+display: block;
+padding: 5px 20px;
+text-decoration: none;
+color: black;
+}
+                                                                              
+.dropdown-content>ul>li>a:hover {
+background-color: #ccc;
+}
+                                                                              
+.navegador-lateral {
+height: 200vh;
+width: 230px;
+float: left;
+box-shadow: 0 2px 5px #909090;
+}
+                                                                              
+.navegador-lateral>div>ul {
+list-style: none;
+}
+                                                                              
+.navegador-lateral>div>ul>li>a {
+display: block;
+text-decoration: none;
+color: black;
+padding: 0 20px;
+font-family: sans-serif;
+font-size: 17px;
+line-height: 1.5;
+}
+                                                                              
+.navegador-lateral>div>ul>li>a:hover {
+background-color: #ddd;
+}
+                                                                              
+nav p {
+padding: 20px;
+font-family: sans-serif;
+font-size: 20px;
+}
+                                                                              
+.barra-lateral-direita {
+height: 200vh;
+width: 230px;
+float: right;
+display: block;
+box-shadow: 0 2px 5px #909090;
+background: linear-gradient(white, #1ba08c);
+}
+.conteudo {
+animation-name: balao;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+}
+                                                                              
+@keyframes balao {
+from {
+transform: rotateY(0deg);
+}
+to {
+transform: rotateY(360deg);
+}
+}
+.conteudo {
+position: relative;
+animation: balao 5s infinite;
+animation-timing-function: linear;
+}
+                                                                                                
+@keyframes balao {
+from {
+left: 0px;
+}
+to {
+left: 350px;
+}
+}
+                                                                                                
+@media only screen and (max-width: 600px) {
+.navegador-lateral {
+float: left;
+width: 100%;
+}
+                                                                                 
