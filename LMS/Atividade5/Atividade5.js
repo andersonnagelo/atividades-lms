@@ -13,7 +13,7 @@ menuSanduiche.addEventListener("click", function () {
 };*/
 
 let itensAcordeon = document.querySelectorAll(".itens");
-let conteudoAcordeon = document.querySelectorAll(".acordeon ul .conteudo");
+let conteudoAcordeon = document.querySelectorAll(".acordeon .conteudo");
 
 for (let i = 0; i < itensAcordeon.length; i++) {
     itensAcordeon[i].addEventListener("click", function () {
