@@ -19,10 +19,15 @@ header h1 {
 
 .menu-lateral {
     position: fixed;
-    width: 180px;
+    width: 200px;
     height: 100%;
     float: left;
     background-color: rgb(13, 108, 82);
+    transition: transform 600ms;
+}
+
+.menu-lateral.ativo {
+    transform: translateX(0%);
 }
 
 .menu-lateral>ul {
@@ -45,11 +50,22 @@ header h1 {
 
 .menu-sanduiche {
     display: none;
+    top: 0;
+    position: fixed;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(13, 108, 82);
+    outline: none;
+    user-select: none;
 }
 
 .menu-acordeon {
     width: 280px;
-    margin-left: 340px;
+    margin-left: 200px;
     font-family: sans-serif;
     text-align: center;
     padding: 60px;
@@ -69,26 +85,20 @@ header h1 {
     background-color: rgba(211, 207, 207, 0.63);
 }
 
-.acordeon ul {
+.acordeon .conteudo {
     width: 100%;
     list-style: none;
     overflow: hidden;
-    min-height: 0;
-    max-height: 0;
     animation-direction: 0.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-}
-
-.acordeon ul li a {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
+    max-height: 0;
+    transition: max-height 600ms;
+    padding: 0 10px;
     display: block;
     text-decoration: none;
     background-color: #fafafa;
     color: #333;
-    border-bottom: solid 2px #aaa;
 }
 
 @keyframes abrir-acordeon {
@@ -115,25 +125,23 @@ header h1 {
 
 @media screen and (max-width: 480px) {
     .menu-lateral {
-        transform: translateX(-200px);
-        transition: all 0.5s;
+        transform: translateX(-100%);
+        top: 0;
     }
     .menu-sanduiche {
         display: block;
-        position: fixed;
-        color: white;
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        cursor: pointer;
-        border: none;
-        background-color: rgb(13, 108, 82);
-        outline: none;
-        user-select: none;
-        transition: all 0.5s;
     }
-    .menu-acordeon {
+    .menu-sanduiche .ativo {
+        padding: 0;
+        transform: translateX(150px);
+    }
+    header {
+        padding: 0;
+        transform: translateX(200px);
+    }
+    .menu-acordeon .ativo {
         margin: 0;
         padding: 10px;
+        transform: translateX(200px);
     }
 }
