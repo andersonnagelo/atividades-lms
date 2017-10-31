@@ -130,9 +130,8 @@ header span {
     font-family: sans-serif;
     font-size: 20px;
     color: #bf4040;
-    position: relative;
-    top: 20px;
-    left: 60px;
+    padding: 20px;
+    text-align: center;
 }
 
 .barra-lateral-direita>div ul {
@@ -147,6 +146,7 @@ header span {
     font-family: sans-serif;
     font-size: 16px;
     color: #bf4040;
+    text-align: center;
 }
 
 .barra-lateral-direita>div>ul>li>a:hover {
@@ -162,6 +162,8 @@ header span {
 .conteudo img {
     width: 200px;
     height: 200px;
+    margin: auto;
+    margin-top: 200px;
 }
 
 @keyframes cupcake {
