@@ -65,7 +65,6 @@ function verMensagens(grupo) {
 
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
-    /*console.log(xhttp.readyState);*/
     if (xhttp.readyState == 4) {
         let obj_parsed = JSON.parse(xhttp.responseText);
         for (let i = 0; i < obj_parsed.length; i++) {
