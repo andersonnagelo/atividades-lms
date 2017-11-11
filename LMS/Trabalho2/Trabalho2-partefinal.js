@@ -76,20 +76,39 @@ xhttp.onreadystatechange = function () {
 xhttp.open('GET', 'http://rest.learncode.academy/api/Anderson/groups', true);
 xhttp.send();
 
+let btAbrirForm = document.querySelector(".botao-criar-grupo");
+let form = document.querySelector(".formulario");
+
+function abrirForm() {
+    if (form.style.display != "block") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+
+};
+
+btAbrirForm.addEventListener("click", function (e) {
+    e.preventDefault();
+    abrirForm();
+});
 
 let submit = document.querySelector('input[type="submit"]');
-let nomeGrupo = document.querySelector('input[name="nomeg"]');
-let idGrupo = document.querySelector('input[name="idg"]');
+let nomeGrupo = document.querySelector("#nomeg");
+let idGrupo = document.querySelector("#idg");
 
 submit.addEventListener("click", function (e) {
     e.preventDefault();
+
     let nome = nomeGrupo.value;
-    //    let id = idGrupo.value;
+    let id = idGrupo.value
     let body = {
-        nomeGrupo: nome
+        "nomeGrupo": nome,
+        "idGrupo": id
     };
 
     console.dir(body);
+
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4) {
@@ -102,6 +121,7 @@ submit.addEventListener("click", function (e) {
     nomeGrupo.value = "";
     idGrupo.value = "";
 });
+
 let ul = document.querySelector('.container .grupos ul');
 
 function inserirGrupos(nomeGrupo, idGrupo) {

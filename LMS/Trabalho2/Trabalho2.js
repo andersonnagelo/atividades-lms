@@ -52,14 +52,14 @@
                }
          ];*/
 
-let contatos = [];
-
-for (let i = 0; i < contatosMensagens.length; i++) {
-    contatos.push(contatosMensagens[i].usuario);
-};
+//let contatos = [];
+//
+//for (let i = 0; i < contatosMensagens.length; i++) {
+//    contatos.push(contatosMensagens[i].usuario);
+//};
 /*console.log(contatos);*/
-let amigos = document.querySelector(".amigos");
-amigos = amigos.getElementsByTagName("ul")[0];
+let grupos = document.querySelector(".grupos");
+grupos = grupos.getElementsByTagName("ul")[0];
 
 
 function adicionarAmigos(contatos, amigos) {
@@ -74,7 +74,7 @@ function adicionarAmigos(contatos, amigos) {
         a.appendChild(imagem);
         a.appendChild(nome);
         li.appendChild(a);
-        amigos.appendChild(li);
+        grupos.appendChild(li);
     };
 
 };
