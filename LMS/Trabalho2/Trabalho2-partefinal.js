@@ -84,7 +84,7 @@ let idGrupo = document.querySelector('input[name="idg"]');
 submit.addEventListener("click", function (e) {
     e.preventDefault();
     let nome = nomeGrupo.value;
-    let id = idGrupo.value;
+    //    let id = idGrupo.value;
     let body = {
         nomeGrupo: nome
     };
