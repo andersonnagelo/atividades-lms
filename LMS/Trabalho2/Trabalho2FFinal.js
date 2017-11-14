@@ -72,62 +72,37 @@ if (localStorage.idUsuario == "anderson") {
 
 
 function requisicao() {
+    let listaGrupos = document.querySelector(".grupos");
+    listaGrupos = listaGrupos.getElementsByTagName("ul")[0];
+
+    function criarGrupo(grupo) {
+        let nomeGrupo = grupo.nomeGrupo;
+        let li = document.createElement('li');
+        let a = document.createElement('a');
+        a.setAttribute("class", "linkAmigo");
+        let span = document.createElement('span');
+        let imagem = document.createElement("img");
+        imagem.src = "icone-amigos.png";
+        let nome = document.createTextNode(nomeGrupo);
+
+        a.appendChild(imagem);
+        a.appendChild(span);
+        span.appendChild(nome);
+        li.appendChild(a);
+        listaGrupos.appendChild(li);
+
+        li.addEventListener("click", function () {
+            verMensagens(grupo);
+        });
+    };
 
     let listaMensagens = document.querySelector(".lista-mensagens");
-    let grupoSelecionado = document.querySelector(".nome-grupo-selecionado");
-
-//    let botaoEnviarMensagem = document.querySelector(".botao-enviar");
-//    let campoMensagem = document.querySelector("digitar-mensagem");
-//
-//    botaoEnviarMensagem.addEventListener("click", function (e) {
-//        e.preventDefault();
-//
-//        let msg = campoMensagem.value;
-//        let body = {
-//            "message": msg,
-//            "usuario": localStorage.idUsuario
-//        };
-//
-//
-//        let xhttp = new XMLHttpRequest();
-//        xhttp.onreadystatechange = function () {
-//            if (xhttp.readyState == 4) {
-//                updateMensagens();
-//            }
-//        }
-//        xhttp.open('POST', 'http://rest.learncode.academy/api/Anderson/groups', true);
-//        xhttp.setRequestHeader('content-type', 'application/json');
-//        xhttp.send(JSON.stringify(body));
-//        campoMensageme.value = "";
-//    });
-//
-//    function updateMensagens() {
-//        listaMensagens.innerHTML = "";
-//
-//        let xhttp = new XMLHttpRequest();
-//        xhttp.onreadystatechange = function () {
-//            if (xhttp.readyState == 4) {
-//                let parsed = JSON.parse(xhttp.responseText);
-//                for (let i = 0; i < parsed.length; i++) {
-//                    verMensagens(parsed[i]);
-//                }
-//            }
-//        }
-//        xhttp.open("GET", "http://rest.learncode.academy/api/Anderson/groups", true);
-//        xhttp.send();
-//    };
 
     function verMensagens(grupo) {
-
         let nomeGrupo = grupo.nomeGrupo;
         let id = grupo.idGrupo;
-        let texto = document.createTextNode(nomeGrupo);
 
-        grupoSelecionado.innerHTML = "";
         listaMensagens.innerHTML = "";
-
-        console.log(nomeGrupo);
-        grupoSelecionado.appendChild(texto);
 
         let xhttp2 = new XMLHttpRequest();
         xhttp2.onreadystatechange = function () {
@@ -157,10 +132,8 @@ function requisicao() {
                 }
             }
         }
-
         xhttp2.open('GET', 'http://rest.learncode.academy/api/Anderson/' + id, true);
         xhttp2.send();
-//        updateMensagens();
     };
 
 
@@ -169,6 +142,7 @@ function requisicao() {
         if (xhttp.readyState == 4) {
             let obj_parsed = JSON.parse(xhttp.responseText);
             for (let i = 0; i < obj_parsed.length; i++) {
+                criarGrupo(obj_parsed[i]);
                 console.log(obj_parsed);
             }
         }
@@ -176,88 +150,58 @@ function requisicao() {
     xhttp.open('GET', 'http://rest.learncode.academy/api/Anderson/groups', true);
     xhttp.send();
 
-    let btAbrirForm = document.querySelector(".botao-criar-grupo");
-    let form = document.querySelector(".formulario");
 
-    function abrirForm() {
-        if (form.style.display != "block") {
-            form.style.display = "block";
-        } else {
-            form.style.display = "none";
-        }
-
-    };
-
-    btAbrirForm.addEventListener("click", function (e) {
-        e.preventDefault();
-        abrirForm();
-    });
-
-
-    let submit = document.querySelector(".botao-criar");
-    let campoNomeGrupo = document.querySelector("#nomeg");
-    let campoIDGrupo = document.querySelector("#idg");
+    let submit = document.querySelector('input[type="submit"]');
+    let nomeGrupo = document.querySelector('input[name="nomeg"]');
+    let idGrupo = document.querySelector('input[name="idg"]');
 
     submit.addEventListener("click", function (e) {
         e.preventDefault();
-
+        let nome = nomeGrupo.value;
+        let id = idGrupo.value;
         let body = {
-            nomeGrupo: campoNomeGrupo.value,
-            idGrupo: campoIDGrupo.value
-        }
-        let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-            if (xhttp.readyState == 4) {
-                updateGrupo();
-            }
+            "nomeGrupo": nome,
+            "idGrupo": id
         };
 
-        xhttp.open("POST", "http://rest.learncode.academy/api/Anderson/groups", true);
-        xhttp.setRequestHeader("content-type", "application/json")
-        xhttp.send(JSON.stringify(body));
-        campoNomeGrupo.value = "";
-        campoIDGrupo.value = "";
-    });
-
-    function updateGrupo() {
-        listaGrupos.innerHTML = "";
-
+        console.dir(body);
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState == 4) {
-                let parsed = JSON.parse(xhttp.responseText);
-                for (let i = 0; i < parsed.length; i++) {
-                    inserirGrupos(parsed[i]);
-                }
+                enviarGrupo();
             }
         }
-        xhttp.open("GET", "http://rest.learncode.academy/api/Anderson/groups", true);
-        xhttp.send();
-    };
+        xhttp.open('POST', 'http://rest.learncode.academy/api/Anderson/groups', true);
+        xhttp.setRequestHeader('content-type', 'application/json');
+        xhttp.send(JSON.stringify(body));
+        nomeGrupo.value = "";
+        idGrupo.value = "";
+    });
+    let ul = document.querySelector('.container .grupos ul');
 
-    let listaGrupos = document.querySelector(".grupos");
-    listaGrupos = listaGrupos.getElementsByTagName("ul")[0];
-
-    function inserirGrupos(grupo) {
-        let nomeGrupo = grupo.nomeGrupo;
+    function inserirGrupos(nomeGrupo, idGrupo) {
         let li = document.createElement('li');
-        let a = document.createElement('a');
-        a.setAttribute("class", "linkAmigo");
-        let span = document.createElement('span');
-        let imagem = document.createElement("img");
-        imagem.src = "icone-amigos.png";
-        let nome = document.createTextNode(nomeGrupo);
+        let texto = document.createTextNode(nomeGrupo + idGrupo);
 
-        a.appendChild(imagem);
-        a.appendChild(span);
-        span.appendChild(nome);
-        li.appendChild(a);
-        listaGrupos.appendChild(li);
+        li.appendChild(texto);
+        ul.appendChild(li);
+    }
 
-        li.addEventListener("click", function () {
-            verMensagens(grupo);
-        });
-    };
-    updateGrupo();
-};
-//    ////Enviar Mensagens
+    function enviarGrupo() {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4) {
+                let json = xhttp.responseText;
+                let parsed_json = JSON.parse(json);
+                ul.innerHTML = '';
+                parsed_json.forEach(function (e) {
+                    enviarGrupo(e.nomeGrupo, e.idGrupo);
+                });
+            }
+        }
+        xhttp.open('GET', 'http://rest.learncode.academy/api/Anderson/groups', true);
+        xhttp.send();
+    }
+    enviarGrupo();
+
+}
