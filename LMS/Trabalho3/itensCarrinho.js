@@ -65,7 +65,7 @@ function mostrarProdutosCarrinho() {
 
         $itensCarrinho.append(finalizar);
     } else {
-        $itensCarrinho.append('<li> <p> Seu carrinho está VAZIO :/</p> </li>');
+        $itensCarrinho.append('<li> <p style="padding:5px; text-align:center;"> Seu carrinho está VAZIO :/</p> </li>');
     }
 }
 
@@ -100,7 +100,7 @@ function criarProdutoCarrinho(produto) {
             '<li id="produto-carrinho' + produto.id + '">',
                 '<span class="item">',
                     '<span class="item-left">',
-                        '<img src="img/"' + produto.imagem + 'alt=""/>',
+                        '<img style = "width:50px; height:50px;"src="img/' + produto.imagem + ' "alt=""/>',
                         '<span class="item-info">',
                             '<span>' + produto.nome + '</span>',
                             '<span>R$' + produto.valor + '</span>',
