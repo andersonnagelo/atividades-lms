@@ -40,7 +40,6 @@ $("#login").submit(function () {
             console.log(idUsuario);
             break;
         }
-
     }
     return false;
 });

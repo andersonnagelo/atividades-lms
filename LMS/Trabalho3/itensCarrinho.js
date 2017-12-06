@@ -65,7 +65,7 @@ function mostrarProdutosCarrinho() {
 
         $itensCarrinho.append(finalizar);
     } else {
-        $itensCarrinho.append('<li><p> Seu carrinho está VAZIO :/!</p></li>');
+        $itensCarrinho.append('<li> <p> Seu carrinho está VAZIO :/</p> </li>');
     }
 }
 
@@ -122,5 +122,24 @@ function criarProdutoCarrinho(produto) {
             exibirFinalizarCompra();
         }
     });
+}
+
+function alterarQuantidadeCarrinho(produto, quantidade) {
+    let carrinho = window.localStorage.getItem("carrinho");
+
+    if (carrinho == null || carrinho == "undefined") {
+        return false;
+    }
+
+    carrinho = JSON.parse(carrinho);
+
+    for (let i = 0; i < carrinho.produtosCarrinho.length; i++) {
+        if (carrinho.produtosCarrinho[i].id == produto.id) {
+            carrinho.produtosCarrinho[i].quantidade = quantidade;
+            break;
+        }
+    }
+
+    window.localStorage.setItem("carrinho", JSON.stringify(carrinho));
 }
 mostrarProdutosCarrinho();

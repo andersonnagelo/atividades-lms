@@ -15,7 +15,7 @@ function validarCampos(campo) {
 let botaoLogin = document.querySelector(".bt-entrar");
 let botaoCadastro = document.querySelector(".bt-cadastrar");
 let botaoSair = document.querySelector(".sair");
-let botaoCarrinho = document.querySelector(".bt-carrinho");
+let botaoCarrinho = document.querySelector(".btn-carrinho");
 //let botaoQtd = document.querySelectorAll(".quantidade");
 
 function mostrarBtLoginCadastro() {
@@ -32,6 +32,7 @@ function mostrarBtSairCarrinho() {
     botaoLogin.style.display = "none";
     botaoSair.style.display = "block";
     botaoCarrinho.style.display = "block";
+    //    botaoQtd.style.display = "block";
 }
 
 if (!verificarLogin()) {
