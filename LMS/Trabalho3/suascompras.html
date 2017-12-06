@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria de Produtos</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="galeriadeprodutos.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th class="text-center">Preço</th>
+                            <th class="text-center">Total</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-sm-8 col-md-6">
+                                <div class="media">
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Nome do Produto</a></h4>
+                                        <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                        <span>Status: </span><span class="text-success"><strong>Em estoque</strong></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-sm-1 col-md-1" style="text-align: center">
+                                <input type="number" class="form-control" id="exampleInputEmail1" value="3" min="1">
+                            </td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>R$4.87</strong></td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>R$14.61</strong></td>
+                            <td class="col-sm-1 col-md-1">
+                                <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remover
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-6">
+                                <div class="media">
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Nome do Produto</a></h4>
+                                        <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                        <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-md-1" style="text-align: center">
+                                <input type="number" class="form-control" id="exampleInputEmail1" value="2" min="1">
+                            </td>
+                            <td class="col-md-1 text-center"><strong>R$4.99</strong></td>
+                            <td class="col-md-1 text-center"><strong>R$9.98</strong></td>
+                            <td class="col-md-1">
+                                <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remover
+                        </button></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                                <h5>Subtotal</h5>
+                            </td>
+                            <td class="text-right">
+                                <h5><strong>R$24.59</strong></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                                <h3>Total</h3>
+                            </td>
+                            <td class="text-right">
+                                <h3><strong>R$31.53</strong></h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                                <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Continuar comprando
+                        </button></td>
+                            <td>
+                                <button type="button" class="btn btn-success " onclick="window.location.href = 'galeriadeprodutos.html'">
+                            Finalizar <span class="glyphicon glyphicon-play"></span>
+                        </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+    </script>
+
+</body>
+
+</html>
