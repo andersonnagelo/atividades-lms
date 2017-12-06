@@ -83,7 +83,7 @@ function removerProdutoCarrinho(produto) {
 
     for (let i = 0; i < carrinho.produtosCarrinho.length; i++) {
         if (carrinho.produtosCarrinho[i].id != produto.id) {
-            valor += carrinho.produtosCarrinho[i].valor * carrinho.produtosCarrinho[i].qtd;
+            valor += carrinho.produtosCarrinho[i].valor * carrinho.produtosCarrinho[i].quantidade;
             produtosCarrinho.push(carrinho.produtosCarrinho[i]);
         }
     }
